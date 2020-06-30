@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobileLuoYang0505</string>
+    <string name="bottom_navigation_news">新闻</string>
+    <string name="bottom_navigation_recommend">推荐</string>
+    <string name="bottom_navigation_recharge">缴费</string>
+    <string name="bottom_navigation_people">民生</string>
+</resources>
