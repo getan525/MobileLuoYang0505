@@ -10,7 +10,7 @@ public interface IBaseView {
     //关闭进度
     void hideLoading();
     //提示信息
-    void showMsg();
+    void showMsg(String s);
 
     //显示请求成功
     //void showSuccess();

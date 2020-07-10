@@ -3,7 +3,7 @@ package com.getan.mobileluoyang0505.mvp.model.impl;
 import android.util.Log;
 
 import com.getan.mobileluoyang0505.bean.HomeCateBean;
-import com.getan.mobileluoyang0505.mvp.ApiCompleteListenter;
+import com.getan.mobileluoyang0505.mvp.ApiCompleteListener;
 import com.getan.mobileluoyang0505.mvp.model.IHomeModel;
 import com.getan.mobileluoyang0505.net.ApiService;
 import com.getan.mobileluoyang0505.net.RetrofitManager;
@@ -17,7 +17,7 @@ import io.reactivex.schedulers.Schedulers;
 public class HomeModelImpl implements IHomeModel {
     ApiService mApiService = RetrofitManager.getApiService();
     @Override
-    public void getHomeCategory(ApiCompleteListenter listener) {
+    public void getHomeCategory(ApiCompleteListener listener) {
 
 
         mApiService.getCate()
@@ -36,7 +36,7 @@ public class HomeModelImpl implements IHomeModel {
 
                     @Override
                     public void onError(Throwable e) {
-                        listener.onFailed();
+                        listener.onFailed(e.toString());
                         Log.d("====", "loadData: //////////////////////////////////////");
                     }
 

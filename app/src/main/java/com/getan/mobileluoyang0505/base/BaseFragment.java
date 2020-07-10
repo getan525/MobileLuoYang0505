@@ -31,6 +31,7 @@ public abstract class BaseFragment extends Fragment{
         mUnbinder = ButterKnife.bind(this, mRootView);
 
         initView();
+        initData();
         return mRootView;
     }
 

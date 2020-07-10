@@ -44,4 +44,17 @@ public class RetrofitManager {
 
     }
 
+    public static ApiService getApiService_2(){
+        Retrofit mRetrofit = new Retrofit.Builder()
+                .baseUrl(Constant.BaseURL_2)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(getOkHttpClient())
+                .build();
+
+        return mRetrofit.create(ApiService.class);
+
+
+    }
+
 }

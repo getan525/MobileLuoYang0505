@@ -1,7 +1,5 @@
 package com.getan.mobileluoyang0505.ui.adapter;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -38,6 +36,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         HomeCateBean.DataBean.CateListBean cateListBean = mCateListBeans.get(position);
         HomePagerFragment pagerFragment = HomePagerFragment.newInstance(cateListBean);
+
         return pagerFragment;
     }
 
